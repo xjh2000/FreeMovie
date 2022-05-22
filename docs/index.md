@@ -1,3 +1,10 @@
+---
+layout: default
+title: Home
+nav_order: 1
+permalink: /
+---
+
 # 项目目的
 
 - 尝试前后端开发
