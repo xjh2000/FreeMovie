@@ -1,8 +1,7 @@
 import React from 'react';
 import {useDispatch, useSelector} from "@@/exports";
 
-
-export default function HomePage() {
+export default function RegisterPage() {
     const dispatch = useDispatch();
     const count = useSelector((state: any) => state.count);
 

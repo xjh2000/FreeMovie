@@ -1,24 +1,15 @@
-import {defineConfig} from '@umijs/max';
+import {defineConfig} from "umi";
 
 export default defineConfig({
-    npmClient: 'pnpm',
-    model: {},
-    antd: {},
-    request: {},
-    initialState: {},
-    mock: {
-        include: ['src/pages/**/_mock.ts'],
-    },
-    layout: {
-        // https://umijs.org/zh-CN/plugins/plugin-layout
-        locale: false,
-        siderWidth: 208,
-    },
+    npmClient: "pnpm",
+    history: {type: "hash"},
     proxy: {
-        '/api': {
-            'target': 'http://localhost:8080',
-            'changeOrigin': true,
+        "/api": {
+            target: "http://localhost:8080",
+            changeOrigin: true,
         },
     },
-})
 
+    dva: {immer: {}},
+    plugins: ["@umijs/plugins/dist/dva"],
+});
