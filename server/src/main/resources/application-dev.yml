@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/movie
+    username: root
+    password: root
+
+
+logging:
+  level:
+    sql: info
+    web: warn
+    root: info
